@@ -16,6 +16,7 @@ public class Deck {
 				cards.add(c);
 			}
 		}
+		shuffle();
 	}
 
 	public int checkDeckSize() {
