@@ -2,12 +2,12 @@ package com.skilldistillery.cards.common;
 
 import java.util.List;
 
-public class BlackJackHand extends Hand{
-	
+public class BlackJackHand extends Hand {
+
 	public BlackJackHand() {
 		super();
 	}
-	
+
 	@Override
 	public int getHandValue() {
 		int sumCards = 0;
@@ -17,21 +17,16 @@ public class BlackJackHand extends Hand{
 		return sumCards;
 	}
 	
+	
 	public boolean isBust() {
-		int sum = 0;
-		for (Card card : hand) {
-			sum += card.getValue();
-		}
-		return sum > 21;
+		return getHandValue() > 21;
+	}
+
+	public boolean isBlackJack() {
+		return getHandValue() == 21;
 	}
 	
-	public boolean isBlackJack() {
-		int sum = 0;
-		for (Card card : hand) {
-			sum += card.getValue();
-		}
-		return sum == 21;
-	}
+	
 
 	@Override
 	public String toString() {
@@ -41,9 +36,9 @@ public class BlackJackHand extends Hand{
 		}
 		return handInfo;
 	}
-	
+
 //	public Card removeCard() {
 //		hand.remove
 //	}
-	
+
 }

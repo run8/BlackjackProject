@@ -18,12 +18,6 @@ public abstract class AbstractPlayer {
 	}
 	
 	public AbstractPlayer() {}
-	
-//	public AbstractPlayer(String name, int score) {
-//		super();
-//		this.name = name;
-////		this.score = score;
-//	}
 
 	public String getName() {
 		return name;
