@@ -24,6 +24,7 @@ public class BlackJackPlayer extends AbstractPlayer {
 			return true;
 		}
 		System.out.println("Ok, player stays.");
+
 		return false;
 	}
 	
