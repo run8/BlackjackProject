@@ -1,7 +1,5 @@
 package com.skilldistillery.player;
 
-import java.util.Scanner;
-
 import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Deck;
 
@@ -13,6 +11,7 @@ public class BlackJackDealer extends BlackJackPlayer {
 	}
 	
 	public void dealOneCard(BlackJackPlayer player) {
+		System.out.println("Dealer deals 1 card to " + player.getName());
 		Card card = this.deck.dealCard();
 		player.addCardToHand(card);
 	}
@@ -20,25 +19,15 @@ public class BlackJackDealer extends BlackJackPlayer {
 	public void displayHandMinus1() {
 		Card dontShow = hand.removeCard();
 		System.out.println("Dealer hand: " + this.hand.toString() +
-				"one face down card.");
+				"one face down card. Total: " + getHandValue());
 		hand.addCard(dontShow);
 	}
-	
-//	public void displayAllDealerHand() {
-//		System.out.println(this.hand.toString());
-//	}
 	
 	public void shuffle() {
 		this.deck.shuffle();
 	}
-	
-	public int getHandValue() {
-		return hand.getHandValue();
-	}
-	
-	public boolean hasBlackJack() {
-		return hand.isBlackJack();
-	}
 
-	
+	public void displayRemainingDeck() {
+		System.out.println(deck.toString());
+	}
 }

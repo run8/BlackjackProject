@@ -2,6 +2,7 @@ package com.skilldistillery.cards.common;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Deck {
@@ -33,4 +34,16 @@ public class Deck {
 	public void shuffle() {
 		Collections.shuffle(cards);
 	}
+
+	@Override
+	public String toString() {
+		String deckString = "";
+		
+		for (Card card : cards) {
+			deckString += card.toString() + " \n";
+		}
+		return deckString;
+	}
+	
+	
 }

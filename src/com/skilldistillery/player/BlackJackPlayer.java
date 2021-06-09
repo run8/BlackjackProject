@@ -15,7 +15,8 @@ public class BlackJackPlayer extends AbstractPlayer {
 	public BlackJackPlayer() {}
 
 	public void displayHand() {
-		System.out.println(this.getName() + " hand: " + hand.toString());
+		System.out.println(this.getName() + " hand: " + hand.toString()
+		+ " Total: " + getHandValue());
 	}
 	
 	public Boolean playerWantsToHit(Scanner scanner) {
